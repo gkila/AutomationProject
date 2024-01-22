@@ -18,6 +18,18 @@ namespace AutomationProject.Screens
             this.wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
         }        
 
+         public void Open()
+        {
+            driver.Navigate().GoToUrl("http://google.com");
+        }
+
+         public void SearchFor(string searchValue)
+        {
+            IWebElement searchBox = wait.Until(driver => driver.FindElement(By.Name("q")));
+            searchBox.SendKeys(searchValue);
+            searchBox.Submit();
+        }
+
 
 
     }
