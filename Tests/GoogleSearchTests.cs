@@ -21,7 +21,7 @@ public class Tests
     public void Test1()
     {
         googleSearchScreen.Open();
-        googleSearchScreen.SearchFor("teste");
+        googleSearchScreen.SearchFor("HCHB");
 
     }
 
